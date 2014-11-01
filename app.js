@@ -20,7 +20,7 @@ app.get('/', function (req, res, next) {
 
         res.send(items);
 
-;
+        var objs = items;
         var lodash = require('lodash');
         objs = lodash.sortBy(objs, 'id');
         objs = lodash.uniq(objs, 'id');
