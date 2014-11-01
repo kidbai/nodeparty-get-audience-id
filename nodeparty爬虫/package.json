@@ -1,0 +1,23 @@
+{
+  "name": "lesson3",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "1",
+  "scripts": {
+    "test": "1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "1"
+  },
+  "keywords": [
+    "1"
+  ],
+  "author": "youngbye",
+  "license": "1",
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "express": "^4.9.8",
+    "superagent": "^0.20.0"
+  }
+}
