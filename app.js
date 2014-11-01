@@ -19,6 +19,24 @@ app.get('/', function (req, res, next) {
         });
 
         res.send(items);
+
+;
+        var lodash = require('lodash');
+        objs = lodash.sortBy(objs, 'id');
+        objs = lodash.uniq(objs, 'id');
+
+        objs = objs.map(function (obj) { return obj.id });
+        objs = objs.join('\n');
+
+        var fs = require('fs');
+        fs.open('id.text', 'w', 0644, function(e, fd){
+            if(e) throw e;
+            fs.write(fd, objs, 0, 'utf-8', function(e){
+                if(e) throw e;
+                fs.closeSync(fd);
+            });
+        });
+
     });
 });
 
